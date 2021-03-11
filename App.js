@@ -1,4 +1,4 @@
-if(__DEV__) {
+if (__DEV__) {
   import('./src/config/ReactotronConfig').then(() => console.log('Reactotron Configured'))
 }
 import React from 'react';

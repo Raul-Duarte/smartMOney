@@ -11,12 +11,12 @@ const NewEntry = () => {
             <View>
                 <TextInput style={styles.input} />
                 <TextInput style={styles.input} />
-                <Button title="gps"/>
-                <Button title="camera"/>
+                <Button title="gps" />
+                <Button title="camera" />
             </View>
             <View>
-            <Button title="Adicionar"/>
-            <Button title="Cancelar"/>
+                <Button title="Adicionar" />
+                <Button title="Cancelar" />
             </View>
 
         </View>
