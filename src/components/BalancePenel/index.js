@@ -4,12 +4,12 @@ import { View, StyleSheet, Button } from 'react-native';
 import BalancePenelLabel from './BalancePenelLabel'
 import BalancePenelChart from './BalancePenelChart'
 
-const BalancePenel = () => {
+const BalancePenel = ({currentBalance}) => {
     return (
         <View style={styles.container}>
-            <BalancePenelLabel />
+            <BalancePenelLabel currentBalance={currentBalance} />
             <BalancePenelChart />
-            <Button  title="Adicionar"/>
+
         </View>
     )
 }
@@ -17,7 +17,7 @@ const BalancePenel = () => {
 export default BalancePenel;
 
 const styles = StyleSheet.create({
-    ccontainer:{
+    ccontainer: {
         // flex:1,
     }
 })

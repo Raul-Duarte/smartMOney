@@ -3,22 +3,14 @@ import { View, Text, FlatList, StyleSheet } from 'react-native';
 
 // import { Container } from './styles';
 
-const EntrySumaryList = () => {
+const EntrySumaryList = ({ entriesGrouped }) => {
   return (
     <View style={styles.constainer}>
       <Text style={styles.title}>Categorias</Text>
       <FlatList
-
-        data={[
-          { key: 'Alimentação: $201' },
-          { key: 'Combustivl: $12 ' },
-          { key: 'Aluguel: $120' },
-          { key: 'Lazer $250' },
-          { key: 'Outros $1200' },
-        ]}
-
+        data={entriesGrouped}
         renderItem={({ item }) => (
-          <Text>{item.key}</Text>
+          <Text>- {item.description}: ${item.amount}</Text>
         )}
       />
     </View>

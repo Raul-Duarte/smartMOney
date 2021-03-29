@@ -4,10 +4,11 @@ import BalanceLabel from '../../components/BalanceLabel';
 
 // import { Container } from './styles';
 
-const NewEntry = () => {
+const NewEntry = ({navigation}) => {
+    const currentBalance = "2.065,35"
     return (
         <View style={styles.container}>
-            <BalanceLabel />
+            <BalanceLabel currentBalance={currentBalance}/>
             <View>
                 <TextInput style={styles.input} />
                 <TextInput style={styles.input} />
@@ -16,7 +17,7 @@ const NewEntry = () => {
             </View>
             <View>
                 <Button title="Adicionar" />
-                <Button title="Cancelar" />
+                <Button title="Cancelar" onPress={()=>navigation.goBack()} />
             </View>
 
         </View>
